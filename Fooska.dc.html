@@ -23,6 +23,34 @@
   @keyframes fk-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
+  h1, h2, h3, p { text-wrap: pretty; }
+  section[id] { scroll-margin-top: 78px; }
+  header nav a { white-space: nowrap; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #C6512F; outline-offset: 3px; }
+  details summary [data-plus] { display: inline-block; transition: transform .18s ease; }
+  details[open] summary [data-plus] { transform: rotate(45deg); }
+  @media (max-width: 1020px) { header [data-navlinks] { gap: 16px !important; font-size: 13.5px !important; } }
+  @media (max-width: 760px) { header [data-navlinks] { display: none !important; } }
+  @media (max-width: 860px) {
+    main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    main [style*="padding: 52px"] { padding: 30px !important; }
+    main [style*="padding: 60px"] { padding: 34px 26px !important; }
+    main [style*="padding: 44px"] { padding: 28px !important; }
+    main [style*="padding: 64px"] { padding: 40px 22px !important; }
+    main [style*="font-size: 64px"] { font-size: 44px !important; }
+    [data-phone2] { display: none !important; }
+    [data-phone1] { width: 70% !important; max-width: 280px !important; margin-top: 0 !important; transform: none !important; }
+  }
+  @media (max-width: 600px) {
+    main h1 { font-size: 38px !important; line-height: 1.08 !important; }
+    main h2 { font-size: 30px !important; }
+    header [data-navlinks] { display: none !important; }
+    section { padding-left: 18px !important; padding-right: 18px !important; }
+    main [style*="border-radius: 42px"] { border-radius: 26px !important; }
+    main [style*="border-radius: 38px"] { border-radius: 24px !important; }
+    main [style*="border-radius: 36px"] { border-radius: 22px !important; }
+    main [style*="border-radius: 32px"] { border-radius: 20px !important; }
+  }
 </style>
 </helmet>
 
@@ -38,7 +66,7 @@
       <span style="font-family:'Newsreader',serif; font-weight:600; font-size:23px; color:#7A3418; letter-spacing:0.3px;">Fooska</span>
     </a>
     <div style="display:flex; align-items:center; gap:30px;">
-      <div style="display:flex; gap:28px; font-size:14.5px; color:#5c554a;">
+      <div data-navlinks style="display:flex; gap:28px; font-size:14.5px; color:#5c554a;">
         <a href="#how" style="color:#5c554a;">How it works</a>
         <a href="#features" style="color:#5c554a;">Features</a>
         <a href="whats-new.html" style="color:#5c554a;">What's new</a>
@@ -58,10 +86,10 @@
     <div style="position:absolute; inset:0; background:radial-gradient(1100px 520px at 78% 12%, rgba(198,81,47,0.10), transparent 60%); pointer-events:none;"></div>
     <div style="position:relative; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center;">
       <div>
-        <div style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:999px; padding:7px 14px; font-size:12.5px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; color:#8a7f6e;">
+        <div style="display:inline-flex; align-items:center; gap:8px; white-space:nowrap; background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:999px; padding:7px 14px; font-size:12.5px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; color:#8a7f6e;">
           <span style="width:7px; height:7px; border-radius:50%; background:#5D6B2B;"></span> Now on iOS
         </div>
-        <h1 style="font-family:'Newsreader',serif; font-weight:500; font-size:64px; line-height:1.02; letter-spacing:-0.5px; margin:22px 0 0; color:#262019;">Catch the words<br>worth <span style="font-style:italic; color:#C6512F;">keeping.</span></h1>
+        <h1 style="font-family:'Newsreader',serif; font-weight:500; font-size:clamp(40px, 5.4vw, 64px); line-height:1.02; letter-spacing:-0.5px; margin:22px 0 0; color:#262019;">Catch the words<br>worth <span style="font-style:italic; color:#C6512F;">keeping.</span></h1>
         <p style="font-size:19px; line-height:1.55; color:#5c554a; max-width:480px; margin:22px 0 0;">Fooska turns the expressions you hear in movies, podcasts and real conversations into vocabulary you'll actually remember — captured in seconds, drilled by smart spaced practice.</p>
         <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:32px;">
           <a href="https://apps.apple.com/app/fooska" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:11px; background:#262019; color:#f7f4ee; padding:15px 26px; border-radius:999px; font-size:16px; font-weight:600; box-shadow:0 12px 30px rgba(38,32,25,0.22);">
@@ -141,15 +169,15 @@
           </ul>
         </div>
         <div style="display:flex; align-items:flex-start; justify-content:center; gap:18px;">
-          <div style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(38,32,25,0.22); width:52%;"><img src="assets/screens/capture-listening.png" alt="Voice capture" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
-          <div style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(38,32,25,0.22); width:52%; margin-top:36px;"><img src="assets/screens/capture-save.png" alt="Enriched expression ready to save" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
+          <div data-phone1 style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(38,32,25,0.22); width:52%;"><img src="assets/screens/capture-listening.png" alt="Voice capture" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
+          <div data-phone2 style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(38,32,25,0.22); width:52%; margin-top:36px;"><img src="assets/screens/capture-save.png" alt="Enriched expression ready to save" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
         </div>
       </div>
 
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; background:#262019; color:#f4f1e8; border-radius:30px; padding:52px; overflow:hidden;">
         <div style="display:flex; align-items:flex-start; justify-content:center; gap:18px; order:1;">
-          <div style="background:#000; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(0,0,0,0.4); width:52%; margin-top:36px;"><img src="assets/screens/flashcard.png" alt="Flashcard practice" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
-          <div style="background:#000; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(0,0,0,0.4); width:52%;"><img src="assets/screens/fill-correct.png" alt="Fill-in-the-blank correct" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
+          <div data-phone1 style="background:#000; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(0,0,0,0.4); width:52%; margin-top:36px;"><img src="assets/screens/flashcard.png" alt="Flashcard practice" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
+          <div data-phone2 style="background:#000; padding:7px; border-radius:42px; box-shadow:0 22px 50px rgba(0,0,0,0.4); width:52%;"><img src="assets/screens/fill-correct.png" alt="Fill-in-the-blank correct" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
         </div>
         <div style="order:2;">
           <div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.7px; color:#e0a488; font-weight:600; margin-bottom:14px;">Practice</div>
@@ -196,8 +224,8 @@
       </div>
       <div style="position:relative; display:flex; align-items:flex-start; justify-content:center; gap:16px;">
         <div style="position:absolute; top:12px; right:14px; background:rgba(255,255,255,0.85); color:#B14A22; font-size:11px; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; padding:5px 11px; border-radius:999px; z-index:3;">Preview</div>
-        <div style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 24px 54px rgba(90,43,22,0.28); width:50%; transform:rotate(-4deg);"><img src="assets/screens/warm-home-crop.png" alt="Warm &amp; Playful theme preview — home" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
-        <div style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 24px 54px rgba(90,43,22,0.28); width:50%; margin-top:34px; transform:rotate(4deg);"><img src="assets/screens/warm-library-crop.png" alt="Warm &amp; Playful theme preview — library" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
+        <div data-phone1 style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 24px 54px rgba(90,43,22,0.28); width:50%; transform:rotate(-4deg);"><img src="assets/screens/warm-home-crop.png" alt="Warm &amp; Playful theme preview — home" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
+        <div data-phone2 style="background:#141210; padding:7px; border-radius:42px; box-shadow:0 24px 54px rgba(90,43,22,0.28); width:50%; margin-top:34px; transform:rotate(4deg);"><img src="assets/screens/warm-library-crop.png" alt="Warm &amp; Playful theme preview — library" style="display:block; width:100%; height:auto; border-radius:36px;"></div>
       </div>
     </div>
   </section>
@@ -253,7 +281,7 @@
           <details style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:18px; padding:20px 24px;">
             <summary style="display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:16.5px; font-weight:600; color:#262019;">
               <span>{{ item.q }}</span>
-              <span style="color:#C6512F; font-size:22px; line-height:1;">+</span>
+              <span data-plus style="color:#C6512F; font-size:22px; line-height:1;">+</span>
             </summary>
             <p style="font-size:15.5px; line-height:1.6; color:#5c554a; margin:14px 0 0;">{{ item.a }}</p>
           </details>
@@ -305,6 +333,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  componentDidMount() { document.title = "Fooska — Catch the words worth keeping"; }
   renderVals() {
     return {
       faqs: [

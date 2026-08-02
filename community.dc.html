@@ -17,6 +17,22 @@
   a { color: #C6512F; text-decoration: none; }
   a:hover { color: #7A3418; }
   ::selection { background: rgba(198,81,47,0.18); }
+  h1, h2, h3, p { text-wrap: pretty; }
+  section[id] { scroll-margin-top: 78px; }
+  header nav a { white-space: nowrap; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #C6512F; outline-offset: 3px; }
+  @media (max-width: 860px) {
+    main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    main [style*="padding: 52px"] { padding: 30px !important; }
+    main [style*="padding: 60px"] { padding: 34px 26px !important; }
+    main [style*="padding: 44px"] { padding: 28px !important; }
+    main [style*="padding: 52px 40px"] { padding: 36px 22px !important; }
+  }
+  @media (max-width: 600px) {
+    main h1 { font-size: 38px !important; line-height: 1.08 !important; }
+    main h2 { font-size: 28px !important; }
+    section { padding-left: 18px !important; padding-right: 18px !important; }
+  }
 </style>
 </helmet>
 
@@ -103,6 +119,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  componentDidMount() { document.title = "Community — Fooska"; }
   renderVals() {
     return {
       channels: [

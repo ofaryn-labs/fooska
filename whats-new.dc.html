@@ -18,6 +18,26 @@
   a { color: #C6512F; text-decoration: none; }
   a:hover { color: #7A3418; }
   ::selection { background: rgba(198,81,47,0.18); }
+  h1, h2, h3, p { text-wrap: pretty; }
+  section[id] { scroll-margin-top: 78px; }
+  header nav a { white-space: nowrap; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #C6512F; outline-offset: 3px; }
+  @media (max-width: 860px) {
+    main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    main [style*="padding: 52px"] { padding: 30px !important; }
+    main [style*="padding: 60px"] { padding: 34px 26px !important; }
+    main [style*="padding: 44px"] { padding: 28px !important; }
+    main [style*="padding: 52px 40px"] { padding: 36px 22px !important; }
+    [data-phone2] { display: none !important; }
+    [data-phone1] { width: 70% !important; max-width: 280px !important; margin-top: 0 !important; transform: none !important; }
+  }
+  @media (max-width: 600px) {
+    main h1 { font-size: 38px !important; line-height: 1.08 !important; }
+    main h2 { font-size: 28px !important; }
+    section { padding-left: 18px !important; padding-right: 18px !important; }
+    main [style*="border-radius: 38px"] { border-radius: 24px !important; }
+    main [style*="border-radius: 32px"] { border-radius: 20px !important; }
+  }
 </style>
 </helmet>
 
@@ -65,8 +85,8 @@
             </ul>
           </div>
           <div style="position:relative; display:flex; align-items:flex-start; justify-content:center; gap:14px;">
-            <div style="background:#141210; padding:6px; border-radius:38px; box-shadow:0 20px 46px rgba(90,43,22,0.26); width:50%; transform:rotate(-4deg);"><img src="assets/screens/warm-home-crop.png" alt="Warm &amp; Playful preview — home" style="display:block; width:100%; height:auto; border-radius:32px;"></div>
-            <div style="background:#141210; padding:6px; border-radius:38px; box-shadow:0 20px 46px rgba(90,43,22,0.26); width:50%; margin-top:28px; transform:rotate(4deg);"><img src="assets/screens/warm-library-crop.png" alt="Warm &amp; Playful preview — library" style="display:block; width:100%; height:auto; border-radius:32px;"></div>
+            <div data-phone1 style="background:#141210; padding:6px; border-radius:38px; box-shadow:0 20px 46px rgba(90,43,22,0.26); width:50%; transform:rotate(-4deg);"><img src="assets/screens/warm-home-crop.png" alt="Warm &amp; Playful preview — home" style="display:block; width:100%; height:auto; border-radius:32px;"></div>
+            <div data-phone2 style="background:#141210; padding:6px; border-radius:38px; box-shadow:0 20px 46px rgba(90,43,22,0.26); width:50%; margin-top:28px; transform:rotate(4deg);"><img src="assets/screens/warm-library-crop.png" alt="Warm &amp; Playful preview — library" style="display:block; width:100%; height:auto; border-radius:32px;"></div>
           </div>
         </div>
       </sc-for>
@@ -119,6 +139,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  componentDidMount() { document.title = "What's new — Fooska"; }
   renderVals() {
     return {
       upcoming: [
