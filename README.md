@@ -5,9 +5,9 @@
 Capture a phrase the moment you hear it, let Fooska enrich it with meaning and context, then lock it in with smart spaced-repetition practice. Available now on iOS.
 
 🌐 **Website:** https://fooska.app
-🍎 **App Store:** https://apps.apple.com/app/fooska
+🍎 **App Store:** https://apps.apple.com/app/id6795742497
 
-![Fooska home screen](assets/screens/home.png)
+![Fooska home screen](assets/screens/framed/home.webp)
 
 ## Why Fooska
 
@@ -24,14 +24,15 @@ Traditional flashcard apps make you build decks from scratch and drill vocabular
 - **Voice & text capture** with live transcription and automatic AI enrichment (meaning, example, pronunciation).
 - **Source tagging** — remember where you heard each expression, from a show to a friend.
 - **Smart daily practice** — a bite-sized mix generated from exactly what's due: flashcards, listen-and-repeat, and fill-in-the-blank.
+- **Pronunciation scoring** — record yourself and get accuracy, fluency and completeness back, with word-by-word feedback and half-speed playback.
 - **Spaced-repetition engine** that learns your personal forgetting curve for maximum recall in minimum time.
 - **Progress tracking** — streaks, a consistency heatmap, and a per-expression mastery breakdown.
 - **Personal phrasebook** — every expression you've caught, searchable, sorted, and scored.
-- **Warm & Playful theme** *(coming soon)* — a second app-wide visual direction alongside the default Calm Editorial look.
+- **Two app-wide looks** — Calm Editorial and Alpine Focus, switchable any time from the You tab.
 
 ## Languages
 
-Learn expressions in **English, Spanish, French, German, and Portuguese**, with meanings explained in the language you're most comfortable in.
+Learn expressions in **English, Mandarin, Spanish, French, Portuguese, German, Japanese, Korean and Italian**, with meanings explained in whichever of them you're most comfortable in.
 
 ## Two minutes a day
 
