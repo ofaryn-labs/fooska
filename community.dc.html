@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="apple-itunes-app" content="app-id=6795742497">
+<meta name="theme-color" content="#f7f4ee">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MCA5MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkZvb3NrYSBhcHAgaWNvbiI+IDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI5MCIgaGVpZ2h0PSI5MCIgcng9IjIwIiBmaWxsPSIjQzY1MTJGIi8+IDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ1LDQ1KSBzY2FsZSgxLjM1KSB0cmFuc2xhdGUoLTQ1LC00NSkgc2NhbGUoMC45Mzc1KSI+PHBhdGggZD0iTTMxIDM1IEMyNiAyNSAyOCAxNiAzNSAxOSBDNDAgMjEgNDEgMjkgNDAgMzYgWiIgZmlsbD0iI0ZCRTREOCI+PC9wYXRoPjxwYXRoIGQ9Ik02NSAzNSBDNzAgMjUgNjggMTYgNjEgMTkgQzU2IDIxIDU1IDI5IDU2IDM2IFoiIGZpbGw9IiNGQkU0RDgiPjwvcGF0aD48cGF0aCBkPSJNMzMgMzMgQzMwIDI2IDMxIDIwIDM1IDIyIEMzOCAyNCAzOCAzMCAzNyAzNSBaIiBmaWxsPSIjRTdCNDlBIj48L3BhdGg+PHBhdGggZD0iTTYzIDMzIEM2NiAyNiA2NSAyMCA2MSAyMiBDNTggMjQgNTggMzAgNTkgMzUgWiIgZmlsbD0iI0U3QjQ5QSI+PC9wYXRoPjxwYXRoIGQ9Ik00OCAyNSBDMzUgMjUgMjggMzQgMjggNDcgQzI4IDYwIDM2IDcxIDQ4IDc5IEM2MCA3MSA2OCA2MCA2OCA0NyBDNjggMzQgNjEgMjUgNDggMjUgWiIgZmlsbD0iI0ZCRTREOCI+PC9wYXRoPjxlbGxpcHNlIGN4PSI0OCIgY3k9IjYzIiByeD0iMTEiIHJ5PSI5IiBmaWxsPSIjRkJGM0VDIj48L2VsbGlwc2U+PHBhdGggZD0iTTM2IDQ2IFE0MCA0MSA0NCA0NiBRNDAgNTAgMzYgNDYgWiIgZmlsbD0iIzdBMzQxOCI+PC9wYXRoPjxwYXRoIGQ9Ik01MiA0NiBRNTYgNDEgNjAgNDYgUTU2IDUwIDUyIDQ2IFoiIGZpbGw9IiM3QTM0MTgiPjwvcGF0aD48cGF0aCBkPSJNNDQgNTYgUTQ4IDUzIDUyIDU2IFE0OCA2MSA0NCA1NiBaIiBmaWxsPSIjN0EzNDE4Ij48L3BhdGg+PHBhdGggZD0iTTQ4IDYwIFY2NCBNNDggNjQgUTQzIDY3IDQwIDY0IE00OCA2NCBRNTMgNjcgNTYgNjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdBMzQxOCIgc3Ryb2tlLXdpZHRoPSIyLjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPjwvZz4gPC9zdmc+">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f4ee; color: #262019; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif; }
+  a { color: #C6512F; text-decoration: none; }
+  a:hover { color: #7A3418; }
+  ::selection { background: rgba(198,81,47,0.18); }
+  h1, h2, h3, p { text-wrap: pretty; }
+  section[id] { scroll-margin-top: 78px; }
+  header nav a { white-space: nowrap; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #C6512F; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  @media (max-width: 860px) {
+    main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    main [style*="padding: 52px"] { padding: 30px !important; }
+    main [style*="padding: 60px"] { padding: 34px 26px !important; }
+    main [style*="padding: 44px"] { padding: 28px !important; }
+    main [style*="padding: 52px 40px"] { padding: 36px 22px !important; }
+  }
+  @media (max-width: 600px) {
+    main h1 { font-size: 38px !important; line-height: 1.08 !important; }
+    main h2 { font-size: 28px !important; }
+    section { padding-left: 18px !important; padding-right: 18px !important; }
+  }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90"><rect width="90" height="90" rx="20" fill="#C6512F"></rect><g transform="translate(45,45) scale(1.35) translate(-45,-45) scale(0.9375)"><path d="M31 35 C26 25 28 16 35 19 C40 21 41 29 40 36 Z" fill="#FBE4D8"></path><path d="M65 35 C70 25 68 16 61 19 C56 21 55 29 56 36 Z" fill="#FBE4D8"></path><path d="M33 33 C30 26 31 20 35 22 C38 24 38 30 37 35 Z" fill="#E7B49A"></path><path d="M63 33 C66 26 65 20 61 22 C58 24 58 30 59 35 Z" fill="#E7B49A"></path><path d="M48 25 C35 25 28 34 28 47 C28 60 36 71 48 79 C60 71 68 60 68 47 C68 34 61 25 48 25 Z" fill="#FBE4D8"></path><ellipse cx="48" cy="63" rx="11" ry="9" fill="#FBF3EC"></ellipse><path d="M36 46 Q40 41 44 46 Q40 50 36 46 Z" fill="#7A3418"></path><path d="M52 46 Q56 41 60 46 Q56 50 52 46 Z" fill="#7A3418"></path><path d="M44 56 Q48 53 52 56 Q48 61 44 56 Z" fill="#7A3418"></path><path d="M48 60 V64 M48 64 Q43 67 40 64 M48 64 Q53 67 56 64" fill="none" stroke="#7A3418" stroke-width="2.4" stroke-linecap="round"></path></g></svg></template>
+<div style="overflow-x:hidden;">
+
+<header style="position:sticky; top:0; z-index:50; background:rgba(247,244,238,0.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,0,0,0.06);">
+  <nav style="max-width:1000px; margin:0 auto; padding:14px 26px; display:flex; align-items:center; justify-content:space-between; gap:20px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:11px;">
+      <span style="display:inline-flex; width:38px; height:38px; border-radius:11px; background:#C6512F; align-items:center; justify-content:center;">
+        <svg viewBox="0 0 90 90" width="38" height="38" aria-hidden="true"><g transform="translate(45,45) scale(1.35) translate(-45,-45) scale(0.9375)"><path d="M31 35 C26 25 28 16 35 19 C40 21 41 29 40 36 Z" fill="#FBE4D8"></path><path d="M65 35 C70 25 68 16 61 19 C56 21 55 29 56 36 Z" fill="#FBE4D8"></path><path d="M33 33 C30 26 31 20 35 22 C38 24 38 30 37 35 Z" fill="#E7B49A"></path><path d="M63 33 C66 26 65 20 61 22 C58 24 58 30 59 35 Z" fill="#E7B49A"></path><path d="M48 25 C35 25 28 34 28 47 C28 60 36 71 48 79 C60 71 68 60 68 47 C68 34 61 25 48 25 Z" fill="#FBE4D8"></path><ellipse cx="48" cy="63" rx="11" ry="9" fill="#FBF3EC"></ellipse><path d="M36 46 Q40 41 44 46 Q40 50 36 46 Z" fill="#7A3418"></path><path d="M52 46 Q56 41 60 46 Q56 50 52 46 Z" fill="#7A3418"></path><path d="M44 56 Q48 53 52 56 Q48 61 44 56 Z" fill="#7A3418"></path><path d="M48 60 V64 M48 64 Q43 67 40 64 M48 64 Q53 67 56 64" fill="none" stroke="#7A3418" stroke-width="2.4" stroke-linecap="round"></path></g></svg>
+      </span>
+      <span style="font-family:'Newsreader',serif; font-weight:600; font-size:23px; color:#7A3418;">Fooska</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:26px; font-size:14.5px; color:#5c554a;">
+      <a href="whats-new.html" style="color:#5c554a;">What's new</a>
+      <a href="index.html" style="display:inline-flex; align-items:center; gap:7px; background:#262019; color:#f7f4ee; padding:9px 16px; border-radius:999px; font-weight:600;">Home</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section style="padding:74px 26px 40px;">
+    <div style="max-width:1000px; margin:0 auto; text-align:center;">
+      <div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.7px; color:#a89c88; font-weight:600; margin-bottom:14px;">Community</div>
+      <h1 style="font-family:'Newsreader',serif; font-weight:500; font-size:54px; line-height:1.04; letter-spacing:-0.4px; margin:0 auto; max-width:680px;">Learn out loud, <span style="font-style:italic; color:#C6512F;">together.</span></h1>
+      <p style="font-size:18px; line-height:1.55; color:#5c554a; max-width:560px; margin:20px auto 0;">Swap the expressions you've caught, trade study tips, request features, and help shape where Fooska goes next.</p>
+    </div>
+  </section>
+
+  <section style="padding:10px 26px 30px;">
+    <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <sc-for list="{{ channels }}" as="ch" hint-placeholder-count="3">
+        <a href="{{ ch.href }}" style="display:block; background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:22px; padding:30px 26px; color:inherit;" style-hover="border-color:rgba(198,81,47,0.35); transform:translateY(-3px);">
+          <div style="width:48px; height:48px; border-radius:14px; background:rgba(192,114,79,0.14); display:flex; align-items:center; justify-content:center; font-size:24px;">{{ ch.emoji }}</div>
+          <h3 style="font-family:'Newsreader',serif; font-weight:600; font-size:21px; margin:18px 0 6px;">{{ ch.title }}</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#5c554a; margin:0 0 12px;">{{ ch.desc }}</p>
+          <span style="font-size:13.5px; font-weight:600; color:#C6512F;">{{ ch.cta }} →</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:40px 26px;">
+    <div style="max-width:1000px; margin:0 auto; background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:26px; padding:44px;">
+      <h2 style="font-family:'Newsreader',serif; font-weight:500; font-size:30px; margin:0 0 26px;">A few house rules</h2>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:22px;">
+        <sc-for list="{{ rules }}" as="r" hint-placeholder-count="4">
+          <div style="display:flex; gap:13px; align-items:flex-start;">
+            <span style="flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:rgba(93,107,43,0.15); color:#5D6B2B; display:flex; align-items:center; justify-content:center; font-size:14px;">✓</span>
+            <div><div style="font-weight:600; font-size:15.5px; margin-bottom:3px;">{{ r.h }}</div><div style="font-size:14.5px; line-height:1.55; color:#5c554a;">{{ r.d }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:10px 26px 80px;">
+    <div style="max-width:1000px; margin:0 auto; background:#262019; border-radius:26px; padding:52px 40px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background:radial-gradient(600px 300px at 50% -10%, rgba(198,81,47,0.35), transparent 60%);"></div>
+      <div style="position:relative;">
+        <h2 style="font-family:'Newsreader',serif; font-weight:500; font-size:36px; color:#f7f4ee; margin:0 0 12px;">Have an idea for Fooska?</h2>
+        <p style="font-size:16px; color:#cbbfa9; margin:0 0 26px;">Feature requests, problem reports and plain feedback all shape the roadmap. We read every one.</p>
+        <a href="mailto:fooska.app@gmail.com?subject=Fooska%20feedback" style="display:inline-flex; align-items:center; gap:9px; background:#f7f4ee; color:#262019; padding:14px 26px; border-radius:999px; font-size:15px; font-weight:600;">Email fooska.app@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="border-top:1px solid rgba(0,0,0,0.08); padding:44px 26px;">
+  <div style="max-width:1000px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+    <span style="font-family:'Newsreader',serif; font-weight:600; font-size:19px; color:#7A3418;">Fooska</span>
+    <div style="display:flex; gap:26px; font-size:14px; color:#5c554a; flex-wrap:wrap;">
+      <a href="index.html" style="color:#5c554a;">Home</a>
+      <a href="whats-new.html" style="color:#5c554a;">What's new</a>
+      <a href="privacy.html" style="color:#5c554a;">Privacy</a>
+      <a href="terms.html" style="color:#5c554a;">Terms</a>
+    </div>
+  </div>
+  <div style="max-width:1000px; margin:26px auto 0; font-size:12.5px; color:#a89c88;">© 2026 Fooska. Made for language lovers.</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() { document.title = "Community — Fooska"; }
+  renderVals() {
+    return {
+      channels: [
+        { emoji: "💬", title: "Discussion forum", desc: "Ask questions, share wins, and help fellow learners get unstuck.", cta: "Join the forum", href: "#" },
+        { emoji: "✨", title: "Feature requests", desc: "Suggest an idea or report a problem — it comes straight to us.", cta: "Email us", href: "mailto:fooska.app@gmail.com?subject=Fooska%20feature%20request" },
+        { emoji: "📣", title: "Announcements", desc: "Be first to hear about new themes, exercises and releases.", cta: "Follow along", href: "whats-new.html" },
+      ],
+      rules: [
+        { h: "Be kind", d: "Everyone's at a different point in their language journey. Encourage, don't gatekeep." },
+        { h: "Stay on topic", d: "Keep threads about language learning, Fooska, and helping each other improve." },
+        { h: "No spam", d: "No self-promotion, referral links, or off-topic advertising." },
+        { h: "Share generously", d: "Post the expressions and tips that helped you — that's what makes this place useful." },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
